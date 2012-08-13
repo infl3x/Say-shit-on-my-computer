@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+    <head runat="server">
+        <meta name="viewport" content="width=device-width" />
+
+        <script type="text/javascript" language="javascript" src="/Content/Scripts/jQuery.js"></script>
+        <script type="text/javascript" language="javascript" src="/Content/Scripts/Custom.js"></script>
+
+        <link type="text/css" rel="Stylesheet" href="/Content/Styles/Main.css" />
+
+        <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="container-inner">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+        </div>
+    </body>
+</html>

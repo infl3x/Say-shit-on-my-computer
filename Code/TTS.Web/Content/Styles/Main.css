@@ -1,0 +1,50 @@
+﻿body {
+    background: url(/Content/Images/bg.png) repeat;
+    font-family: arial,sans-serif;
+}
+
+#container {
+    background: url(/Content/Images/bg-container.png) no-repeat;
+    height: 300px;
+    margin: 20px auto;
+    width: 400px;
+}
+
+#container-inner {
+    padding: 20px;
+}
+
+label {
+    display: block;
+}
+
+input[type=text], select  {
+    border: 1px solid #ddd;
+    font-size: 18px;
+    padding: 10px 0 10px 10px;
+    display: block;
+    width: 350px;
+}
+
+input[type=text]:focus, select:focus {
+    background-color: #fbffe0;
+}
+
+select {
+    width: 360px;
+}
+
+p.button-wrap {
+    margin: 20px auto;
+    text-align: center;
+}
+
+input[type=submit] {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+#status {
+    display: none;
+}
