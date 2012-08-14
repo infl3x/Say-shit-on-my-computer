@@ -10,10 +10,12 @@ namespace TTS.Web.Helpers {
 
         public string Text { get; set; }
         public string VoiceName { get; set; }
+        public int Rate { get; set; }
 
         public void Run() {
             using (SpeechSynthesizer speaker = new SpeechSynthesizer()) {
                 speaker.SelectVoice(VoiceName);
+                speaker.Rate = Rate;
                 speaker.Speak(Text);
             }
         }

@@ -3,6 +3,10 @@
     font-family: arial,sans-serif;
 }
 
+h2 {
+    margin: 0;
+}
+
 #container {
     background: url(/Content/Images/bg-container.png) no-repeat;
     height: 300px;
@@ -15,36 +19,58 @@
 }
 
 label {
+    color: #222;
     display: block;
+    margin-top: 10px;
 }
 
-input[type=text], select  {
+label span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+label.select-wrap-left {
+    float: left;
+}
+
+label.select-wrap-right {
+    float: right;
+}
+
+textarea {
+    height: 60px;
+}
+
+textarea, select  {
+    font-family: arial, sans-serif;
     border: 1px solid #ddd;
     font-size: 18px;
-    padding: 10px 0 10px 10px;
+    padding: 10px 0 0 10px;
     display: block;
     width: 350px;
 }
 
-input[type=text]:focus, select:focus {
+textarea:focus, select:focus {
     background-color: #fbffe0;
 }
 
 select {
-    width: 360px;
+    padding: 5px;
+    width: 160px;
 }
 
 p.button-wrap {
-    margin: 20px auto;
+    float: left;
     text-align: center;
+    width: 100%;
 }
 
 input[type=submit] {
-    font-size: 15px;
-    font-weight: bold;
-    padding: 5px 20px;
+    font-size: 25px;
+    padding: 5px 30px;
 }
 
 #status {
+    color: #c3f7fc;
     display: none;
 }

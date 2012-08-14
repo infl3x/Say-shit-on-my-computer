@@ -53,11 +53,12 @@ namespace TTS.Web.Helpers {
             })).Start();
         }
 
-        public int EnqueueSpeech(string text, string voiceName) {
+        public int EnqueueSpeech(string text, string voiceName, int speechRate) {
             lock (SpeechQueue) {
                 SpeechTask task = new SpeechTask() {
                     Text = text,
-                    VoiceName = voiceName
+                    VoiceName = voiceName,
+                    Rate = speechRate
                 };
 
                 SpeechQueue.Enqueue(task);

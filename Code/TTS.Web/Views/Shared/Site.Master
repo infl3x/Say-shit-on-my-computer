@@ -1,10 +1,11 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-
 <!DOCTYPE html>
 
 <html>
     <head runat="server">
         <meta name="viewport" content="width=device-width" />
+
+        <link rel="Shortcut Icon" href="/Content/Images/favicon.ico" type="image/x-icon" />
 
         <script type="text/javascript" language="javascript" src="/Content/Scripts/jQuery.js"></script>
         <script type="text/javascript" language="javascript" src="/Content/Scripts/Custom.js"></script>

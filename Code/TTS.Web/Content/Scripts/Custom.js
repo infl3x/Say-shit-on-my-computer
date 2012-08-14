@@ -1,13 +1,22 @@
 ﻿$(document).ready(function () {
 
-    $('#txtSay').focus();
+    $('#txtSay').focus().select();
+
+    $('textarea, select, input').keypress(function(event) {
+        if (event.which == 13) {
+            $('#frmSpeak').submit();
+            event.preventDefault();
+            return true;
+        }
+    });
 
     $('#frmSpeak').submit(function () {
         $('#btnSubmit').fadeOut('fast', function () {
             $('#status').html('Uploading...').fadeIn('fast', function () {
                 var data = {
                     text: $('#txtSay').val(),
-                    voiceTypeIdx: $('#slctVoice :selected').val()
+                    voiceTypeIdx: $('#slctVoice :selected').val(),
+                    speechRate: $('#slctRate :selected').val()
                 };
 
                 $.ajax({

@@ -31,7 +31,7 @@ namespace TTS.Web.Controllers
             return View(model);
         }
 
-        public ActionResult Speak(string text, int voiceTypeIdx) {
+        public ActionResult Speak(string text, int voiceTypeIdx, int speechRate) {
             currentDelayIndex++;
             if (currentDelayIndex % DELAY_FREQUENCY == 0) {
                 // Slow shit down occasionally to fuck with spammers
@@ -39,7 +39,7 @@ namespace TTS.Web.Controllers
                 currentDelayIndex = 0;
             }
 
-            int hashCode = SpeechProcessor.Instance.EnqueueSpeech(text, MvcApplication.InstalledVoices[voiceTypeIdx]);
+            int hashCode = SpeechProcessor.Instance.EnqueueSpeech(text, MvcApplication.InstalledVoices[voiceTypeIdx], speechRate);
 
             return Json(new {
                 success = true,
