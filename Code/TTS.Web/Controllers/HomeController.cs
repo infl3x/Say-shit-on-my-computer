@@ -23,9 +23,16 @@ namespace TTS.Web.Controllers
 
         public ActionResult Index()
         {
-            MvcApplication application = (MvcApplication)HttpContext.ApplicationInstance;
             IndexModel model = new IndexModel() {
                 InstalledVoices = MvcApplication.InstalledVoices
+            };
+
+            return View(model);
+        }
+
+        public ActionResult Log() {
+            LogModel model = new LogModel() {
+                SpeechRequests = SpeechLog.Instance(Request.MapPath("/")).ReadLog()
             };
 
             return View(model);
@@ -40,6 +47,8 @@ namespace TTS.Web.Controllers
             }
 
             int hashCode = SpeechProcessor.Instance.EnqueueSpeech(text, MvcApplication.InstalledVoices[voiceTypeIdx], speechRate);
+
+            SpeechLog.Instance(Request.MapPath("/")).LogRequest(text, Request.UserHostName);
 
             return Json(new {
                 success = true,

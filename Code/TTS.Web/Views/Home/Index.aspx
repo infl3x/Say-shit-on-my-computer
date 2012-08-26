@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<TTS.Web.Models.IndexModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Say shit on my computer!
+    Home &raquo; Say shit on my computer!
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -10,7 +10,6 @@
     <form id="frmSpeak" action="" method="post">
         <label for="txtSay">
             <span>Say:</span>
-            <%--<input type="text" id="txtSay" name="txtSay" value="something" />--%>
             <textarea id="txtSay" name="txtSay">Something</textarea>
         </label>
 

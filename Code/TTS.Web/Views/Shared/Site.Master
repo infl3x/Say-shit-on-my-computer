@@ -14,7 +14,15 @@
 
         <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
     </head>
+
     <body>
+        <div id="nav">
+            <ul>
+                <li><a href="/" title="Go home">&raquo; Home</a></li>
+                <li><a href="/Home/Log" title="Go to log section">&raquo; Log</a></li>
+            </ul>
+        </div>
+
         <div id="container">
             <div id="container-inner">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />

@@ -22,5 +22,14 @@ namespace TTS.Web.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int MaxLogItems {
+            get {
+                return ((int)(this["MaxLogItems"]));
+            }
+        }
     }
 }

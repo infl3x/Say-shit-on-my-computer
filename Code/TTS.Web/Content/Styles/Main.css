@@ -7,6 +7,32 @@ h2 {
     margin: 0;
 }
 
+#nav {
+    height: 10px;
+    margin: 20px auto;
+    width: 400px;
+}
+
+#nav a {
+    color: #c1dced;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+#nav ul {
+    float: right;
+    margin: 0;
+}
+
+#nav ul li {
+    float: left;
+    list-style: none;
+    margin-right: 5px;
+}
+
 #container {
     background: url(/Content/Images/bg-container.png) no-repeat;
     height: 300px;
@@ -73,4 +99,20 @@ input[type=submit] {
 #status {
     color: #c3f7fc;
     display: none;
+}
+
+#previous-requests {
+    color: #222222;
+    height: 210px;
+    font-size: 0.8em;
+    overflow-y: auto;
+}
+
+#previous-requests ul {
+    display: block;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+#block-list {
 }
