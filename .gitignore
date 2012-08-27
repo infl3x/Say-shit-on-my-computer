@@ -1,0 +1,8 @@
+*.DS_Store
+bin
+obj
+*.csproj.user
+*.suo
+TTS.Web.Publish.xml
+/Code/TTS.Web/Data/requests.txt
+/.metadata
