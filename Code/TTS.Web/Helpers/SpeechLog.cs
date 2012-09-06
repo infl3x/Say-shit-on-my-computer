@@ -44,9 +44,9 @@ namespace TTS.Web.Helpers {
                     }
                 } catch { /* Don't care */ }
 
-                logData = logData.Take(Properties.Settings.Default.MaxLogItems).ToList();
                 logData.Reverse();
-
+                logData = logData.Take(Properties.Settings.Default.MaxLogItems).ToList();
+                
                 return logData;
             }
         }
